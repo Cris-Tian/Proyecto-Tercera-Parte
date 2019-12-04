@@ -10,7 +10,8 @@ http://127.0.0.1:8000/productos/telefono/<pk>/update    --Update
 Admin
 
 Usuario    : equiposmart 
-Contraseña : equiposmart
+ContraseÃ±a : equiposmart
 
 Usuario    : equiposmart2 
-Contraseña : equiposmart2
+ContraseÃ±a : equiposmart2
+000
