@@ -2,12 +2,12 @@
 
 Usuario de prueba
 (Cuenta Para login con django)
-Usuario :    Prueba2
+Usuario :    prueba2
 Contraseña : smartshop
 
 ****************************************************
 
-(Direccion para login) /accounts/login
+(Direccion para login) http://127.0.0.1:8000/accounts/login
 
 ****************************************************
 
