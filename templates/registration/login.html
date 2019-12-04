@@ -1,0 +1,84 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<header>
+        <!-- TOP HEADER -->
+        <div id="top-header">
+            <div class="container">
+                <ul class="header-links pull-left">
+                    <li><a href="#"> </i>Administración</a></li>
+                </ul>
+                <ul class="header-links pull-right">
+                </ul>
+            </div>
+        </div>
+        <!-- /TOP HEADER -->
+    
+        <!-- MAIN HEADER -->
+        <div id="header">
+            <!-- container -->
+            <div class="container navbar-custom">
+                <!-- row -->
+                <div class="row">
+                    <!-- LOGO -->
+                    <div class="col-md-3 ">
+                        <div class="header-logo">
+                            <a href="{% url 'check'%}" class="logo ">
+                                {% load static %}
+                                <img class="imagen-titulo" src="{% static 'img/logo.png' %}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /LOGO -->
+    
+                   
+                    
+    
+                    <!-- ACCOUNT -->
+                    <div class="col-md-3 clearfix">
+                        <div class="header-ctn">
+                        </div>
+                    </div>
+                    <!-- /ACCOUNT -->
+                </div>
+                <!-- row -->
+            </div>
+            <!-- container -->
+        </div>
+        <!-- /MAIN HEADER -->
+    </header>
+
+
+{% if form.errors %}
+<p>Tu nombre de usuario y contraseña no coinciden , Por favor intentalo de nuevo</p>
+{% endif %}
+
+{% if next %}
+    {% if user.is_authenticated %}
+    <p> Tu cuenta no tiene acceso para esta pagina, para continuar, logea con una cuenta que tenga acceso</p>
+    {% else %}
+    <p> Por favor logea para ver esta pagina </p>
+    {% endif %}
+{% endif %}
+
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+
+<div>
+    <td> {{ form.username.label_tag }} </td>
+    <td> {{ form.username }} </td>
+</div>
+<div>
+    <td> {{ form.password.label_tag }} </td>
+    <td> {{ form.password }} </td>
+</div>
+
+<div>
+    <input type="submit" value="login" />
+    <input type="hidden" name="next" value="{{ next }}" />
+</div>
+</form>
+<p><a href="{% url 'password_reset' %}" >¿Olvidó su contraseña?</a></p>
+
+{% endblock %}
