@@ -1,0 +1,17 @@
+****************************************************
+
+Usuario de prueba
+(Cuenta Para login con django)
+Usuario :    Prueba2
+Contraseña : smartshop
+
+****************************************************
+
+(Direccion para login) /accounts/login
+
+****************************************************
+
+(Pagina en Python Anywhere) Pythonanywhere
+http://tiendasmarts.pythonanywhere.com/productos/
+
+****************************************************
